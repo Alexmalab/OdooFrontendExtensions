@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="image_viewer.ImagePreviewField" t-inherit="web.ImageField" t-inherit-mode="primary">
+        <xpath expr="//img[hasclass('img-fluid')]" position="replace">
+            <div class="o_field_image" t-on-click="openPreview">
+                <img
+                    loading="lazy"
+                    class="img img-fluid"
+                    alt="Binary file"
+                    t-att-src="this.getUrl(props.previewImage or props.name)"
+                    t-att-name="props.name"
+                    t-att-height="props.height"
+                    t-att-width="props.width"
+                    t-att-style="sizeStyle"
+                    t-on-error.stop="onLoadFailed"
+                    t-att-data-tooltip-template="hasTooltip and tooltipAttributes.template"
+                    t-att-data-tooltip-info="hasTooltip and tooltipAttributes.info"
+                    t-att-data-tooltip-delay="hasTooltip and props.zoomDelay"
+                />
+            </div>
+        </xpath>
+    </t>
+</templates>
