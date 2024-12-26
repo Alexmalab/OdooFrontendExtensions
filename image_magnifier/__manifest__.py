@@ -11,7 +11,7 @@
     'depends': ['base','base_setup','web'],
     'assets': {
         'web.assets_backend': [
-            'image_zoomer/static/src/components/**/*',
+            'image_magnifier/static/src/components/**/*',
         ],
     },
     'license': 'AGPL-3',
