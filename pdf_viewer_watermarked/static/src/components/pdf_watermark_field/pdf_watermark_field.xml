@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="web.PdfWatermarkField" t-inherit="web.BinaryField" t-inherit-mode="primary">
+        <xpath expr="//button[hasclass('o_download_file_button')]" position="replace">
+            <button
+                class="btn btn-link btn-sm lh-1 fa fa-download o_download_file_button"
+                data-tooltip="Download"
+                aria-label="Download"
+                t-on-click="onPdfWatermarked"
+            >
+            </button>
+        </xpath>
+        <xpath expr="//a[hasclass('o_form_uri')]" position="replace">
+            <a class="o_form_uri" href="#" t-on-click.prevent="onPdfWatermarked">
+                <span class="fa fa-file-pdf-o me-2" />
+                <t t-if="fileName" t-esc="fileName" />
+            </a>
+        </xpath>
+
+    </t>
+
+</templates>

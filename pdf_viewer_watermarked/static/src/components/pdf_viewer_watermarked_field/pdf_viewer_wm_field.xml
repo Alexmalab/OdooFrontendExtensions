@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="pdf_viewer_watermarked.PdfViewerWatermarked" t-inherit="web.PdfViewerField" owl="1">
+        <xpath expr="//div[hasclass('o_form_pdf_controls')]" position="replace">
+            <!-- 移除控制按钮 -->
+        </xpath>
+        <xpath expr="//iframe[hasclass('o_pdfview_iframe')]" position="replace">
+            <iframe t-ref="pdfViewerWatermarked"
+                class="o_pdfview_iframe"
+                alt="PDF file"
+                t-att-src="url"
+                t-att-name="props.name"
+                t-on-error="onLoadFailed"
+            />
+        </xpath>
+    </t>
+</templates>

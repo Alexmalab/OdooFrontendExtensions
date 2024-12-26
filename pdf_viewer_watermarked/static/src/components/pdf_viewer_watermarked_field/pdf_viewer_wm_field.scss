@@ -1,0 +1,11 @@
+.o_field_widget.o_field_pdf_viewer_wm {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.o_form_view .o_field_widget.o_field_pdf_viewer_wm iframe.o_pdfview_iframe {
+    width: 100%;
+    //todo: need a approprate height
+    height: 400px;
+}
