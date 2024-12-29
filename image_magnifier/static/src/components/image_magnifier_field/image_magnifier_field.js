@@ -4,8 +4,8 @@ import { registry } from "@web/core/registry";
 import { ImageField, imageField } from "@web/views/fields/image/image_field";
 import { onMounted, onWillStart, onWillDestroy, useEffect, useRef } from "@odoo/owl";
 
-class ImageZoomerField extends ImageField {
-    static template="web.ImageZoomerField"
+class ImageMagnifierField extends ImageField {
+    static template="web.ImageMagnifierField"
     setup(){
         super.setup();
         this.isUnSave = false;//需要一个用于标识是否处于未保存状态的
@@ -120,9 +120,9 @@ class ImageZoomerField extends ImageField {
         this.enableZoom();
     }
 }
-export const imageZoomerField = {
+export const imageMagnifierField = {
     ...imageField,
-    component: ImageZoomerField,
+    component: ImageMagnifierField,
 };
 
-registry.category('fields').add('image_zoomer', imageZoomerField);
+registry.category('fields').add('image_magnifier', imageMagnifierField);
