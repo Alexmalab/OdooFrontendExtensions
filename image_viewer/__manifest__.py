@@ -5,7 +5,7 @@
 {
     'name': 'Image Viewer',
     'version': '17.0.1.0',
-    'summary': 'Image Viewer Inherited by Odoo File Viewer',
+    'summary': 'Add `image_viewer` field widget extended from Odoo File Viewer',
     'category': 'Widgets',
     'author': 'Alexandre Ma',
     'website': 'https://github.com/Alexmalab',
