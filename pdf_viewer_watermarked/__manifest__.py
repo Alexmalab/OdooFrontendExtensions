@@ -7,11 +7,6 @@
     'name': 'PDF Viewer Watermark',
     'version': '17.0.1.0',
     'summary':'PDF Viewer Watermark Widgets',
-    'description':  """
-    Two widgets have been introduced:
-    1.`pdf_viewer_wm`, Extends `pdf_viewer`. Generates watermarks via frontend methods with good performance and compatibility but less secure.
-    2.`pdf_watermark`, returns backend-generated watermarked PDF file with less compatible and bad performance with large file, not recommended.
-    """,
     'category': 'Widgets',
     'author': 'Alexandre Ma',
     'website': 'https://github.com/Alexmalab',
