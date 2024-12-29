@@ -9,14 +9,14 @@ import { injectPdfWatermark } from "../../lib/pdfjs";
 export class WatermarkedFileViewer extends FileViewer {
     setup() {
         super.setup();
-        console.log("WatermarkedFileViewer setup");
+        //console.log("WatermarkedFileViewer setup");
         this.user = useService("user");
         this.iframeViewerPdf = useRef("iframeViewerPdf");
 
-        debugger
+        //debugger
         useEffect(() => {
             if (this.state.file.isPdf && this.iframeViewerPdf.el) {
-                console.log("Found PDF iframe, injecting watermark");
+                //console.log("Found PDF iframe, injecting watermark");
                 injectPdfWatermark(this.iframeViewerPdf.el, {
                     text: `${this.user.name} ${new Date().toLocaleString()}`,
                     opacity: 0.5,

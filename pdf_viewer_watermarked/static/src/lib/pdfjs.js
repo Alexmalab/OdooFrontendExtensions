@@ -10,28 +10,28 @@
  * @param {number} config.rotation 旋转角度
  */
 export function injectPdfWatermark(iframe, config) {
-    console.log('[Watermark] Starting injection...', iframe?.contentWindow ? 'iframe ready' : 'iframe not ready');
+    //console.log('[Watermark] Starting injection...', iframe?.contentWindow ? 'iframe ready' : 'iframe not ready');
     if (!iframe?.contentWindow) {
         return;
     }
     const injectScript = () => {
-        console.log('[Watermark] Preparing to inject script...');
+        //console.log('[Watermark] Preparing to inject script...');
         if (!iframe.contentDocument?.head) {
-            console.log('[Watermark] No head element found');
+            //console.log('[Watermark] No head element found');
             return;
         }
 
         const script = iframe.contentDocument.createElement("script");
         script.textContent = `
                 (function() {
-                console.log('[Watermark] Script execution started');
+                //console.log('[Watermark] Script execution started');
 
                 // 水印创建函数
                 function createWatermark(page) {
                     if (!page || page.querySelector('.pdf-watermark-container')) {
                         return;
                     }
-                    console.log('[Watermark] Creating watermark grid for page');
+                    //console.log('[Watermark] Creating watermark grid for page');
 
                     const container = document.createElement('div');
                     container.className = 'pdf-watermark-container';
@@ -85,7 +85,7 @@ export function injectPdfWatermark(iframe, config) {
                     }
 
                     page.appendChild(container);
-                    console.log('[Watermark] Watermark grid added to page');
+                    //console.log('[Watermark] Watermark grid added to page');
                 }
 
                 // 页面可见性检查
@@ -101,7 +101,7 @@ export function injectPdfWatermark(iframe, config) {
 
                 // 处理可见页面
                 function processVisiblePages() {
-                    console.log('[Watermark] Processing visible pages');
+                    //console.log('[Watermark] Processing visible pages');
                     const pages = document.getElementsByClassName('page');
                     Array.from(pages).forEach(page => {
                         if (page instanceof HTMLElement && isPageVisible(page)) {
@@ -125,7 +125,7 @@ export function injectPdfWatermark(iframe, config) {
                 // 水印设置主函数
                 function setupWatermark() {
                     if (!window.PDFViewerApplication || !window.PDFViewerApplication.eventBus) {
-                        console.log('[Watermark] PDFViewerApplication not ready, retrying...');
+                        //console.log('[Watermark] PDFViewerApplication not ready, retrying...');
                         setTimeout(setupWatermark, 100);
                         return;
                     }
@@ -151,9 +151,9 @@ export function injectPdfWatermark(iframe, config) {
 
                     // 注册事件监听器
                     events.forEach(eventName => {
-                    debugger
+                    //debugger
                         eventBus.on(eventName, () => {
-                            console.log('[Watermark] Event ' + eventName + ' triggered');
+                            //console.log('[Watermark] Event ' + eventName + ' triggered');
                             throttledProcess();
                         });
                     });
@@ -190,18 +190,18 @@ export function injectPdfWatermark(iframe, config) {
             })();
         `;
 
-        console.log('[Watermark] Injecting script into document');
+        //console.log('[Watermark] Injecting script into document');
         iframe.contentDocument.head.appendChild(script);
     };
-    debugger
+    //debugger
     // 执行注入
     if (iframe.contentDocument?.readyState === 'complete') {
         // 但要再判断是不是“刚刚切换的新文档”
         // 如果我们没有额外标识的办法，可以简单粗暴地改为:
-        console.log('[Watermark] Forcing to wait load event to be sure we are on the new doc');
+        //console.log('[Watermark] Forcing to wait load event to be sure we are on the new doc');
         iframe.addEventListener('load', injectScript, { once: true });
     } else {
-        console.log('[Watermark] Not complete, waiting iframe load');
+        //console.log('[Watermark] Not complete, waiting iframe load');
         iframe.addEventListener('load', injectScript, { once: true });
     }
 }

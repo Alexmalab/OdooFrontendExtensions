@@ -17,7 +17,7 @@ export class PdfViewerWatermarked extends PdfViewerField {
 
         useEffect(() => {
             if (this.iframeRef.el) {
-                debugger
+                //debugger
                 injectPdfWatermark(this.iframeRef.el, {
                     text: `${this.user.name} ${new Date().toLocaleString()}`,
                     opacity: 0.5,

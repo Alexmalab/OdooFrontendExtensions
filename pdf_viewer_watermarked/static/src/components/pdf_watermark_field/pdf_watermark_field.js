@@ -19,7 +19,7 @@ class PdfWatermarkField extends BinaryField {
                 filename: this.fileName || "",
                 download: true,
             };
-            console.log(data);
+            //console.log(data);
             var url = "/pdf_preview/" + encodeURIComponent(data.model) + "/" + encodeURIComponent(data.id) + "/" + encodeURIComponent(data.field);
             window.open(url, '_blank');
 
