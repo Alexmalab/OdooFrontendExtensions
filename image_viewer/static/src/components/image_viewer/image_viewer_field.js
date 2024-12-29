@@ -7,7 +7,7 @@ import { ImageField, imageField } from "@web/views/fields/image/image_field";
 class ImagePreviewField extends ImageField {
     static template="image_viewer.ImagePreviewField"
     setup() {
-        debugger
+        //debugger
         super.setup();
         this.fileViewer = useFileViewer();
     }
