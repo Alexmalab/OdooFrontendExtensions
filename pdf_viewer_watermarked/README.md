@@ -7,9 +7,6 @@
 - [Features](#features)
 - [Usage](#usage)
 - [Credits](#credits)
-  - [Authors](#authors)
-  - [Copyright](#copyright)
-  - [License](#license)
 
 
 ## Features
@@ -84,12 +81,12 @@ patch(VesselDocumentKanbanRecord.prototype, {
 });
  ```
 ## Credits
-### Authors
-- [Alexandre Ma](https://github.com/Alexmalab)
-### Copyright
-- [Alexandre Ma](mailto:a1exma@hotmail.com)
-### License
-- ![license](https://img.shields.io/badge/licence-AGPL--3-blue.png)
+1. Authors
+   - [Alexandre Ma](https://github.com/Alexmalab)
+2. Copyright
+   - [Alexandre Ma](mailto:a1exma@hotmail.com)
+3. License
+   - ![license](https://img.shields.io/badge/licence-AGPL--3-blue.png)
 
 ## Bug Tracker
 Bugs are tracked on [GitHub Issues](https://github.com/Alexmalab/odoo_js_extensions/pdf_viewer_watermarked/issues). In case of trouble, please check there if your issue has already been reported. If you spotted it first, help us to smash it by providing a detailed and welcomed feedback.
