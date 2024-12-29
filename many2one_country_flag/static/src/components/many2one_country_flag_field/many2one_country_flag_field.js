@@ -1,9 +1,7 @@
 /** @odoo-module **/
 
 import { registry } from "@web/core/registry";
-import { usePopover } from "@web/core/popover/popover_hook";
 import { many2OneField, Many2OneField } from "@web/views/fields/many2one/many2one_field";
-import { Many2OneFieldPopover } from "@web/views/fields/many2one_avatar/many2one_avatar_field";
 import { Component, onWillStart, onWillUpdateProps  } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 
