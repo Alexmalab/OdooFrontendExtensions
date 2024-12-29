@@ -7,7 +7,7 @@
     'version': '17.0.1.0',
     'summary': 'Image Viewer Inherited by Odoo File Viewer',
     'category': 'Widgets',
-    'author': 'Alexandre Marr',
+    'author': 'Alexandre Ma',
     'website': 'https://github.com/Alexmalab',
     'depends': ['base','base_setup','web'],
     'assets': {
