@@ -24,9 +24,16 @@
     - Add watermark feature for viewing pdf file.
 ## Usage
 
-1. `pdf_viewer_wm`: 
+1. `pdf_viewer_wm`:
 ```xml
- <field name="binary_field" widget="pdf_viewer_wm"/>
+<!--add class option enable you set the height value of the viewer container
+    class="h-screen" //full screen
+    class="half-screen" // half screen  
+    class="h-300" //300px
+    class="h-500" //500px
+    
+    -->
+<field name="binary_field" widget="pdf_viewer_wm" class="h-screen"/>
  ```
 2. `pdf_watermark`: 
 ```xml

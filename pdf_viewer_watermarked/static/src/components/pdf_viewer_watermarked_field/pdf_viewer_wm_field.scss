@@ -2,10 +2,30 @@
     display: block;
     width: 100%;
     height: 100%;
+
+    iframe.o_pdfview_iframe {
+        width: 100%;
+    }
 }
 
-.o_form_view .o_field_widget.o_field_pdf_viewer_wm iframe.o_pdfview_iframe {
-    width: 100%;
-    //todo: need a approprate height
-    height: 400px;
+.o_form_view .o_field_widget.o_field_pdf_viewer_wm {
+    // 预设高度选项，考虑form视图的上边距和padding
+    &.h-screen iframe.o_pdfview_iframe {
+        // 100vh减去form视图上方空间(大约120px)和一些边距
+        height: calc(100vh - 150px);
+    }
+
+    &.h-half-screen iframe.o_pdfview_iframe {
+        // 50vh减去部分上方空间
+        height: calc(50vh - 75px);
+    }
+
+    // 自定义固定高度类
+    &.h-300 iframe.o_pdfview_iframe {
+        height: 300px;
+    }
+
+    &.h-500 iframe.o_pdfview_iframe {
+        height: 500px;
+    }
 }
