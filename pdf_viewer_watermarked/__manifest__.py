@@ -7,10 +7,10 @@
     'name': 'PDF Viewer Watermark',
     'version': '17.0.1.0',
     'summary':'PDF Viewer Watermark Widgets',
-    'category': 'Widgets',
+    'category': 'Alex Frontend',
     'author': 'Alexandre Ma',
     'website': 'https://github.com/Alexmalab',
-    'depends': ['base','base_setup','web'],
+    'depends': ['base','base_setup','web','alex_frontend_base'],
     'assets': {
         'web.assets_backend': [
             'pdf_viewer_watermarked/static/src/lib/pdfjs.js',

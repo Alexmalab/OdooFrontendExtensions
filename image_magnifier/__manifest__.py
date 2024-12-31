@@ -7,10 +7,10 @@
     'name': 'Image Magnifier Widget',
     'version': '17.0.1.0',
     'summary': 'Add `image_magnifier` field widget',
-    'category': 'Widgets',
+    'category': 'Alex Frontend',
     'author': 'Alexandre Ma',
     'website': 'https://github.com/Alexmalab',
-    'depends': ['base','base_setup','web'],
+    'depends': ['base','base_setup','web','alex_frontend_base'],
     'assets': {
         'web.assets_backend': [
             'image_magnifier/static/src/components/**/*',

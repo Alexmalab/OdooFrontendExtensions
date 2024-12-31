@@ -6,10 +6,10 @@
     'name': 'Image Viewer',
     'version': '17.0.1.0',
     'summary': 'Add `image_viewer` field widget extended from Odoo File Viewer',
-    'category': 'Widgets',
+    'category': 'Alex Frontend',
     'author': 'Alexandre Ma',
     'website': 'https://github.com/Alexmalab',
-    'depends': ['base','base_setup','web'],
+    'depends': ['base','base_setup','web','alex_frontend_base'],
     'assets': {
         'web.assets_backend': [
             'image_viewer/static/src/components/**/*',

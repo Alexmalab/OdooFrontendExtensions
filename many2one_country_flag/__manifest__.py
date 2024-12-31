@@ -6,10 +6,10 @@
     'name': 'Country Flag Widget',
     'version': '17.0.1.0',
     'summary': 'Country Flag Widget',
-    'category': 'Widgets',
+    'category': 'Alex Frontend',
     'author': 'Alexandre Ma',
     'website': 'https://github.com/Alexmalab',
-    'depends': ['base','base_setup','web'],
+    'depends': ['base','base_setup','web','alex_frontend_base'],
     'assets': {
         'web.assets_backend': [
             'many2one_country_flag/static/src/components/many2one_country_flag_field/*.js',
