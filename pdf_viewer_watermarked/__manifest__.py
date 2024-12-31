@@ -5,7 +5,7 @@
 
 {
     'name': 'PDF Viewer Watermark',
-    'version': '18.0.1.0',
+    'version': '18.0.3.0',
     'summary':'PDF Viewer Watermark Widgets',
     'category': 'Alex Frontend',
     'author': 'Alexandre Ma',
