@@ -131,19 +131,13 @@ class PdfPreviewController(http.Controller):
 
     @http.route('/pdf_preview/<string:model>/<int:document_id>/<string:field_name>', type='http', auth='user')
     def preview_pdf(self, model, document_id, field_name, **kw):
-        try:
-            _model = request.env[model]
-            # 检查用户是否有读取权限
-            _model.check_access_rights('read')
-            document = _model.browse(document_id)
-            # 检查用户是否有权限访问特定记录  原始文件的访问权限
-            document.check_access_rule('read')
-        except Exception as e:
+        _model = request.env[model]
+        document = _model.browse(document_id)
+        # 检查用户是否有权限访问特定记录  原始文件的访问权限
+        if not document.has_access('read'):
             _logger.warning(
-                "User: %s (ID: %d) attempting to access a document which doesn't have permission. Error: %s",
+                "User: %s attempting to access a document which doesn't have permission.",
                 request.env.user.name,
-                request.uid,
-                str(e)
             )
             return request.not_found()
 
