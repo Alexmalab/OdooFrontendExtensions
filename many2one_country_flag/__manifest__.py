@@ -4,7 +4,7 @@
 
 {
     'name': 'Country Flag Widget',
-    'version': '17.0.1.0',
+    'version': '18.0.1.0',
     'summary': 'Country Flag Widget',
     'category': 'Alex Frontend',
     'author': 'Alexandre Ma',

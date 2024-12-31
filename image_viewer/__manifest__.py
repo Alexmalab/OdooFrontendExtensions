@@ -4,7 +4,7 @@
 
 {
     'name': 'Image Viewer',
-    'version': '17.0.1.0',
+    'version': '18.0.1.0',
     'summary': 'Add `image_viewer` field widget extended from Odoo File Viewer',
     'category': 'Alex Frontend',
     'author': 'Alexandre Ma',

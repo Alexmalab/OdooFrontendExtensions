@@ -5,7 +5,7 @@
 
 {
     'name': 'Alex Frontend Base',
-    'version': '17.0.1.0',
+    'version': '18.0.1.0',
     'summary': 'Base module for frontend modules',
     'category': 'Widgets',
     'author': 'Alexandre Ma',

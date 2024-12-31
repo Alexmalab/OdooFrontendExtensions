@@ -7,11 +7,11 @@ Addons
 ------
 addon | version | maintainers | summary
 ---|---|---|---
-[alex_frontend_base](alex_frontend_base/) | 17.0.1.0 | [![alex_ma](https://github.com/alexmalab.png?size=30px)](https://gitee.com/hatchtec_alex)  | Base module for frontend modules
-[image_magnifier](image_magnifier/) | 17.0.1.0 | [![alex_ma](https://github.com/alexmalab.png?size=30px)](https://gitee.com/hatchtec_alex)  | Add `image_magnifier` field widget
-[image_viewer](image_viewer/) | 17.0.1.0 | [![alex_ma](https://github.com/alexmalab.png?size=30px)](https://gitee.com/hatchtec_alex)  | Add `image_viewer` field widget extended from Odoo File Viewer
-[many2one_country_flag](many2one_country_flag/) | 17.0.1.0 | [![alex_ma](https://github.com/alexmalab.png?size=30px)](https://gitee.com/hatchtec_alex)  | Country Flag Widget
-[pdf_viewer_watermarked](pdf_viewer_watermarked/) | 17.0.3.0 | [![alex_ma](https://github.com/alexmalab.png?size=30px)](https://gitee.com/hatchtec_alex)  | PDF Viewer Watermark Widgets
+[alex_frontend_base](alex_frontend_base/) | 18.0.1.0 | [![alex_ma](https://github.com/alexmalab.png?size=30px)](https://gitee.com/hatchtec_alex)  | Base module for frontend modules
+[image_magnifier](image_magnifier/) | 18.0.1.0 | [![alex_ma](https://github.com/alexmalab.png?size=30px)](https://gitee.com/hatchtec_alex)  | Add `image_magnifier` field widget
+[image_viewer](image_viewer/) | 18.0.1.0 | [![alex_ma](https://github.com/alexmalab.png?size=30px)](https://gitee.com/hatchtec_alex)  | Add `image_viewer` field widget extended from Odoo File Viewer
+[many2one_country_flag](many2one_country_flag/) | 18.0.1.0 | [![alex_ma](https://github.com/alexmalab.png?size=30px)](https://gitee.com/hatchtec_alex)  | Country Flag Widget
+[pdf_viewer_watermarked](pdf_viewer_watermarked/) | 18.0.1.0 | [![alex_ma](https://github.com/alexmalab.png?size=30px)](https://gitee.com/hatchtec_alex)  | PDF Viewer Watermark Widgets
 
 
 # Credits
