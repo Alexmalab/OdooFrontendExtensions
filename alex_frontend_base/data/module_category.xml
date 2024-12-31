@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Author: Alexandre Ma <a1exma@hotmail.com>
+     Copyright 2024 Alexandre Ma <alex.ma@hatchtec.com> - HatchTec IT Dept.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <data>
+        <record id="module_category_frontend" model="ir.module.category">
+            <field name="name">Alex Frontend</field>
+            <field name="sequence">20</field>
+        </record>
+    </data>
+</odoo>
