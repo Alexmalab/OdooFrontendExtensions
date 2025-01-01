@@ -1,6 +1,6 @@
 /** @odoo-module **/
 
-import { PdfViewerField } from "@web/views/fields/pdf_viewer/pdf_viewer_field";
+import { PdfViewerField, pdfViewerField } from "@web/views/fields/pdf_viewer/pdf_viewer_field";
 import { registry } from "@web/core/registry";
 import { useRef, useEffect } from "@odoo/owl";
 import { user } from "@web/core/user";
@@ -30,7 +30,7 @@ export class PdfViewerWatermarked extends PdfViewerField {
 }
 
 export const pdfViewerWatermarked = {
-    ...PdfViewerField,
+    ...pdfViewerField,
     component: PdfViewerWatermarked,
 };
 
