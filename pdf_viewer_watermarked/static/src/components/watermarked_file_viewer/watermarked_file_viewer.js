@@ -23,7 +23,7 @@ export class WatermarkedFileViewer extends FileViewer {
                 //console.log("Found PDF iframe, injecting watermark");
                 injectPdfWatermark(this.iframeViewerPdf.el, {
                     text: `${user.name} ${new Date().toLocaleString()}`,
-                    opacity: 0.5,
+                    opacity: 0.32,
                     fontSize: '16px',
                     rotation: -45
                 },this.props.download);

@@ -22,7 +22,7 @@ export class PdfViewerWatermarked extends PdfViewerField {
             if (this.iframeRef.el) {
                 injectPdfWatermark(this.iframeRef.el, {
                     text: `${user.name} ${new Date().toLocaleString()}`,
-                    opacity: 0.5,
+                    opacity: 0.32,
                     fontSize: '16px',
                     rotation: -45
                 },this.props.download);
