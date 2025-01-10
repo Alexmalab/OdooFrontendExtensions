@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Author: Alexandre Ma <a1exma@hotmail.com>
+     Copyright 2024 Alexandre Ma <alex.ma@hatchtec.com> - HatchTec IT Dept.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<templates xml:space="preserve">
+
+    <t t-name="WatermarkedFileViewer" t-inherit="web.FileViewer" t-inherit-mode="primary">
+        <xpath expr="//div[hasclass('o-FileViewer-download')]" position="replace">
+        <t t-if="props.download">
+            <div class="o-FileViewer-download o-FileViewer-headerButton d-flex align-items-center px-3 cursor-pointer" role="button" title="Download" t-on-click.stop="">
+                <a t-att-href="state.file.downloadUrl" class="text-reset d-flex align-items-baseline" download="">
+                    <i class="fa fa-download fa-fw me-1" role="img"/>
+                    <span>Download</span>
+                </a>
+            </div>
+        </t>
+        </xpath>
+    </t>
+
+</templates>

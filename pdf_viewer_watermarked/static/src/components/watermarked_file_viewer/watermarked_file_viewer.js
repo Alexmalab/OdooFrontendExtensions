@@ -7,6 +7,7 @@ import { injectPdfWatermark } from "../../lib/pdfjs";
 
 // WatermarkedFileViewer for watermarked viewing pdf file when using file viewer, usage at vessel.document
 export class WatermarkedFileViewer extends FileViewer {
+    static template="WatermarkedFileViewer"
     static props = {
         ...FileViewer.props,
         download: { type: Boolean, optional: true },
@@ -20,7 +21,6 @@ export class WatermarkedFileViewer extends FileViewer {
         useEffect(() => {
             if (this.state.file.isPdf && this.iframeViewerPdf.el) {
                 //console.log("Found PDF iframe, injecting watermark");
-                debugger
                 injectPdfWatermark(this.iframeViewerPdf.el, {
                     text: `${user.name} ${new Date().toLocaleString()}`,
                     opacity: 0.5,

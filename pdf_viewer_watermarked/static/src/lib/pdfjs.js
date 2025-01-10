@@ -25,6 +25,8 @@ export function injectPdfWatermark(iframe, config, download) {
             const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
             iframeDoc.querySelector('#print').remove();
             iframeDoc.querySelector('#download').remove();
+            iframeDoc.querySelector('#secondaryPrint').remove();
+            iframeDoc.querySelector('#secondaryDownload').remove();
         }
         const script = iframe.contentDocument.createElement("script");
         script.textContent = `
