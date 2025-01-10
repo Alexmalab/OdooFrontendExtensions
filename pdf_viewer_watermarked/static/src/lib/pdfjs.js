@@ -9,7 +9,7 @@
  * @param {string} config.fontSize 字体大小
  * @param {number} config.rotation 旋转角度
  */
-export function injectPdfWatermark(iframe, config) {
+export function injectPdfWatermark(iframe, config, download) {
     //console.log('[Watermark] Starting injection...', iframe?.contentWindow ? 'iframe ready' : 'iframe not ready');
     if (!iframe?.contentWindow) {
         return;
@@ -20,7 +20,12 @@ export function injectPdfWatermark(iframe, config) {
             //console.log('[Watermark] No head element found');
             return;
         }
-
+        // disable download and print
+        if (download === false) {
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            iframeDoc.querySelector('#print').remove();
+            iframeDoc.querySelector('#download').remove();
+        }
         const script = iframe.contentDocument.createElement("script");
         script.textContent = `
                 (function() {

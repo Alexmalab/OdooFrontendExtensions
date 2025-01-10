@@ -9,6 +9,10 @@ import { injectPdfWatermark } from "../../lib/pdfjs";
 // ad a widget: pdf_viewer_wm inherited form pdf_viewer
 export class PdfViewerWatermarked extends PdfViewerField {
     static template = "pdf_viewer_watermarked.PdfViewerWatermarked";
+    static props = {
+        ...PdfViewerField.props,
+        download: { type: Boolean, optional: true },
+    };
 
     setup() {
         super.setup();
@@ -16,13 +20,12 @@ export class PdfViewerWatermarked extends PdfViewerField {
 
         useEffect(() => {
             if (this.iframeRef.el) {
-                //debugger
                 injectPdfWatermark(this.iframeRef.el, {
                     text: `${user.name} ${new Date().toLocaleString()}`,
                     opacity: 0.5,
                     fontSize: '16px',
                     rotation: -45
-                });
+                },this.props.download);
             }
         });
     }
