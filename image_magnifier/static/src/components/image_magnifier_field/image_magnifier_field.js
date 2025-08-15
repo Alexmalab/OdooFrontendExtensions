@@ -5,7 +5,7 @@ import { ImageField, imageField } from "@web/views/fields/image/image_field";
 import { onMounted, onWillStart, onWillDestroy, useEffect, useRef } from "@odoo/owl";
 
 class ImageMagnifierField extends ImageField {
-    static template="web.ImageMagnifierField"
+    static template="image_magnifier.ImageMagnifierField"
     setup(){
         super.setup();
         this.isUnSave = false;//需要一个用于标识是否处于未保存状态的
