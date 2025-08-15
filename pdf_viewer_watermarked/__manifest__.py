@@ -7,8 +7,10 @@
     'name': 'PDF Viewer Watermark',
     'version': '18.0.3.0',
     'summary':'PDF Viewer Watermark Widgets',
-    'description':'PDF Viewer Watermark Widgets',
-    'category': 'Hidden/Tools',
+    'description':"""
+    PDF Viewer Watermark Widgets
+    """,
+    'category': 'Tools',
     'author': 'Alexandre Ma',
     'website': 'https://github.com/Alexmalab/OdooFrontendExtensions/tree/18.0/pdf_viewer_watermarked',
     'depends': ['base','base_setup','web'],
