@@ -18,8 +18,12 @@
             'pdf_viewer_watermarked/static/src/components/**/*',
         ],
     },
+    'external_dependencies': {'python': ['reportlab']},
     'license': 'AGPL-3',
     'installable': True,
     'application': False,
-    'external_dependencies': {'python': ['reportlab']},
+    'auto_install': False,
+    'auto_install': False,
+    'price': 0.10,
+    'currency': 'USD'
 }
