@@ -1,15 +1,12 @@
 # PDF Viewer Watermark
+
+![Alpha](https://img.shields.io/badge/maturity-Alpha-red.png)
 ![license](https://img.shields.io/badge/licence-AGPL--3-blue.png)
-[![author](https://img.shields.io/badge/Alexmalab-gray.png?logo=github)](https://github.com/Alexmalab)
-[![repo](https://img.shields.io/badge/Alexmalab-lightgray.png?logo=github)](https://github.com/Alexmalab/odoo_js_extensions/pdf_viewer_watermarked)
+[![author](https://img.shields.io/badge/Alexmalab-24292f.png?logo=github)](https://github.com/Alexmalab)
+[![repo](https://img.shields.io/badge/OdooFrontendExtensions-f1f8ff.png?logo=github&logoColor=0366d6)](https://github.com/Alexmalab/OdooFrontendExtensions/tree/18.0/pdf_viewer_watermarked)
 
-## Table of Contents
-- [Features](#features)
-- [Usage](#usage)
-- [Credits](#credits)
-
-
-## Features
+## Description
+Allowing you preview pdf documents with watermarked text on it.
 - 2 widgets have been introduced:
 1. `pdf_viewer_wm`, field widget for binary(mimetype:pdf) fields
     - Extended from `pdf_viewer`.
@@ -22,6 +19,7 @@
 - 1 component have been introduced:
 1. `WatermarkedFileViewer`, enhanced version of `FileViewer` component
     - Add watermark feature for viewing pdf file.
+
 ## Usage
 
 1. `pdf_viewer_wm`:
@@ -35,11 +33,13 @@
     -->
 <field name="binary_field" widget="pdf_viewer_wm" class="h-screen"/>
  ```
+**Effect Preview:**
+![Effect Preview](static/description/preview1.png)
 2. `pdf_watermark`: 
 ```xml
  <field name="binary_field" widget="pdf_watermark"/>
  ```
-3. `WatermarkedFileViewer`: 
+3. An example of using the component `WatermarkedFileViewer`: 
 ```javascript
 import { KanbanRecord } from "@web/views/kanban/kanban_record";
 import { useFileViewer } from "@web/core/file_viewer/file_viewer_hook";
@@ -87,13 +87,23 @@ patch(VesselDocumentKanbanRecord.prototype, {
     }
 });
  ```
-## Credits
-1. Authors
-   - [Alexandre Ma](https://github.com/Alexmalab)
-2. Copyright
-   - [Alexandre Ma](mailto:a1exma@hotmail.com)
-3. License
-   - ![license](https://img.shields.io/badge/licence-AGPL--3-blue.png)
-
+**Effect Preview:**
+![Effect Preview](static/description/preview2.gif)
 ## Bug Tracker
-Bugs are tracked on [GitHub Issues](https://github.com/Alexmalab/odoo_js_extensions/pdf_viewer_watermarked/issues). In case of trouble, please check there if your issue has already been reported. If you spotted it first, help us to smash it by providing a detailed and welcomed feedback.
+Bugs are tracked on [GitHub Issues](https://github.com/Alexmalab/OdooFrontendExtensions/issues). In case of trouble, please check there if your issue has already been reported. If you spotted it first, help us to smash it by providing a detailed and welcomed feedback.
+
+## Credits
+### Authors
+
+- [Alexandre Ma](https://github.com/Alexmalab)
+
+### Contributors
+
+- Alexandre Ma<[alex.ma@hatchtec.com](mailto:a1exma@hotmail.com)>
+
+### Copyright
+
+The copyright of this module belongs to [Alexandre Ma](https://github.com/Alexmalab)
+
+## License
+   - ![license](https://img.shields.io/badge/licence-AGPL--3-blue.png)
