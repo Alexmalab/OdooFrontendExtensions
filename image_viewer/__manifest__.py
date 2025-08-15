@@ -1,15 +1,15 @@
 # Author: Alexandre Ma <a1exma@hotmail.com>
-# Copyright 2024 Alexandre Ma <alex.ma@hatchtec.com> - HatchTec IT Dept.
+# Copyright 2024 Alexandre Ma <a1exma@hotmail.com>.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
     'name': 'Image Viewer',
     'version': '18.0.1.0',
-    'summary': 'Add `image_viewer` field widget extended from Odoo File Viewer',
+    'summary': 'Add `image_viewer` field widget extended from Odoo File Viewer enabling you to click and preview the image field',
     'category': 'Alex Frontend',
     'author': 'Alexandre Ma',
-    'website': 'https://github.com/Alexmalab',
-    'depends': ['base','base_setup','web','alex_frontend_base'],
+    'website': 'https://github.com/Alexmalab/OdooFrontendExtensions/tree/18.0/image_viewer',
+    'depends': ['base','base_setup','web'],
     'assets': {
         'web.assets_backend': [
             'image_viewer/static/src/components/**/*',
