@@ -1,0 +1,56 @@
+<h1 id="link-handler-enhance">Link Handler Enhance</h1>
+<p><img src="https://img.shields.io/badge/maturity-Alpha-red.png" alt="Alpha">
+<img src="https://img.shields.io/badge/licence-AGPL--3-blue.png" alt="license">
+<a href="https://github.com/Alexmalab"><img src="https://img.shields.io/badge/Alexmalab-24292f.png?logo=github" alt="author"></a>
+<a href="https://github.com/Alexmalab/OdooFrontendExtensions/tree/18.0/link_handler_enhance"><img src="https://img.shields.io/badge/OdooFrontendExtensions-f1f8ff.png?logo=github&amp;logoColor=0366d6" alt="repo"></a></p>
+<h2 id="description">Description</h2>
+<p>Added 2 attributes support to url link <code>a</code> tag:</p>
+<ul>
+<li><code>data-oe-view-id</code>: specify which view id used; </li>
+<li><code>data-oe-action-id</code>: specify which action id used, now support for access action by id;</li>
+</ul>
+<h2 id="explanation-">Explanation:</h2>
+<p>If you want to send an im message within sale orders with link, you may use <code>_get_html_link</code> method:</p>
+<pre><code class="lang-python"><span class="hljs-attr">links</span> = (
+     record._get_html_link(<span class="hljs-attr">title=record.name)</span>
+     for record <span class="hljs-keyword">in</span> self
+)
+<span class="hljs-attr">message_body</span> = Markup(<span class="hljs-string">"Order(s) %s need to check."</span>) % Markup(<span class="hljs-string">", "</span>.join(<span class="hljs-built_in">map</span>(str, links)))
+
+channel.message_post(
+    <span class="hljs-attr">author_id=...,</span>
+    <span class="hljs-attr">body=message_body,</span>
+    <span class="hljs-attr">message_type='comment',</span>
+    <span class="hljs-attr">subtype_xmlid='mail.mt_comment'</span>
+)
+</code></pre>
+<p>Supposing you have a custom view inherited(using primary mode) by the default view of the model, for example an independent form view for sale.order,</p>
+<p>if you are using the method above, it will always use the default form view id, specifically the default action id,</p>
+<p>But you want the recipient open the order with specific customized view you may use this module by the following usage; </p>
+<p>Use <code>data-oe-view-id</code> to specify which view you want one to open this record.</p>
+<pre><code class="lang-python">view_id = self.env.<span class="hljs-keyword">ref</span>('module.view_xxx_custom_form').<span class="hljs-built_in">id</span>
+links = (
+    Markup(<span class="hljs-string">"&lt;a href=# data-oe-model='%s' data-oe-id='%s' data-oe-view-id='%s'&gt;%s&lt;/a&gt;"</span>) % (
+        <span class="hljs-built_in">record</span>._name, <span class="hljs-built_in">record</span>.<span class="hljs-built_in">id</span>, view_id, <span class="hljs-built_in">record</span>.<span class="hljs-built_in">name</span>)
+    <span class="hljs-keyword">for</span> <span class="hljs-built_in">record</span> <span class="hljs-keyword">in</span> self
+)
+im_msg = Markup(<span class="hljs-string">"You have been assigned to do your job for this order: %s"</span>) % Markup(
+            <span class="hljs-string">", "</span>.join(map(str, links)))
+</code></pre>
+<h2 id="bug-tracker">Bug Tracker</h2>
+<p>Bugs are tracked on <a href="https://github.com/Alexmalab/OdooFrontendExtensions/issues">GitHub Issues</a>. In case of trouble, please check there if your issue has already been reported. If you spotted it first, help us to smash it by providing a detailed and welcomed feedback.</p>
+<h2 id="credits">Credits</h2>
+<h3 id="authors">Authors</h3>
+<ul>
+<li><a href="https://github.com/Alexmalab">Alexandre Ma</a></li>
+</ul>
+<h3 id="contributors">Contributors</h3>
+<ul>
+<li>Alexandre Ma<a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#91;&#97;&#x31;&#x65;&#x78;&#x6d;&#x61;&#64;&#x68;&#111;&#x74;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;&#93;&#x28;&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#97;&#49;&#x65;&#x78;&#109;&#x61;&#64;&#104;&#111;&#116;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;&#41;">&#91;&#97;&#x31;&#x65;&#x78;&#x6d;&#x61;&#64;&#x68;&#111;&#x74;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;&#93;&#x28;&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#97;&#49;&#x65;&#x78;&#109;&#x61;&#64;&#104;&#111;&#116;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;&#41;</a></li>
+</ul>
+<h3 id="copyright">Copyright</h3>
+<p>The copyright of this module belongs to <a href="https://github.com/Alexmalab">Alexandre Ma</a></p>
+<h2 id="license">License</h2>
+<ul>
+<li><img src="https://img.shields.io/badge/licence-AGPL--3-blue.png" alt="license"></li>
+</ul>
