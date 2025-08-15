@@ -6,6 +6,7 @@
     'name': 'Country Flag Widget',
     'version': '18.0.1.0',
     'summary': 'Country flag field widget for form, list and kanban views',
+    'description':"""Country flag field widget for form, list and kanban views""",
     'category': 'Hidden/Tools',
     'author': 'Alexandre Ma',
     'website': 'https://github.com/Alexmalab/OdooFrontendExtensions/tree/18.0/many2one_country_flag',

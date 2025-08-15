@@ -7,6 +7,7 @@
     'name': 'Image Magnifier Widget',
     'version': '18.0.1.0',
     'summary': 'Add the `image_magnifier` field widget to enable an image magnifier on mouseover.',
+    'description':"""Add the `image_magnifier` field widget to enable an image magnifier on mouseover.""",
     'category': 'Hidden/Tools',
     'author': 'Alexandre Ma',
     'website': 'https://github.com/Alexmalab/OdooFrontendExtensions/tree/18.0/image_magnifier',
