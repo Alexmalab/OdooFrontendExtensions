@@ -6,7 +6,7 @@
     'name': 'Image Viewer',
     'version': '18.0.1.0',
     'summary': 'Add `image_viewer` field widget extended from Odoo File Viewer enabling you to click and preview the image field',
-    'category': 'Alex Frontend',
+    'category': 'Hidden/Tools',
     'author': 'Alexandre Ma',
     'website': 'https://github.com/Alexmalab/OdooFrontendExtensions/tree/18.0/image_viewer',
     'depends': ['base','base_setup','web'],

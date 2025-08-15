@@ -6,7 +6,7 @@
     'name': 'Country Flag Widget',
     'version': '18.0.1.0',
     'summary': 'Country flag field widget for form, list and kanban views',
-    'category': 'Alex Frontend',
+    'category': 'Hidden/Tools',
     'author': 'Alexandre Ma',
     'website': 'https://github.com/Alexmalab/OdooFrontendExtensions/tree/18.0/many2one_country_flag',
     'depends': ['base','base_setup','web'],
