@@ -31,7 +31,7 @@ Bugs are tracked on [GitHub Issues](https://github.com/Alexmalab/OdooFrontendExt
 
 ### Contributors
 
-- Alexandre Ma<[alex.ma@hatchtec.com](mailto:a1exma@hotmail.com)>
+- Alexandre Ma<[a1exma@hotmail.com](mailto:a1exma@hotmail.com)>
 
 ### Copyright
 
