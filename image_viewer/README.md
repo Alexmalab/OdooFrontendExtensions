@@ -1,4 +1,4 @@
-# Image Magnifier
+# Image Viewer
 
 ![Alpha](https://img.shields.io/badge/maturity-Alpha-red.png)
 ![license](https://img.shields.io/badge/licence-AGPL--3-blue.png)
