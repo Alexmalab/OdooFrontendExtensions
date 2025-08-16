@@ -34,7 +34,7 @@ Allowing you preview pdf documents with watermarked text on it.
 <field name="binary_field" widget="pdf_viewer_wm" class="h-screen"/>
  ```
 **Effect Preview:**
-![Effect Preview](static/description/preview1.png)
+<img src="static/description/preview1.png" width="1200">
 2. `pdf_watermark`: 
 ```xml
  <field name="binary_field" widget="pdf_watermark"/>
