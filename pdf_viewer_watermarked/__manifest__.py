@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 # Author: Alexandre Ma <a1exma@hotmail.com>
-# Copyright 2024 Alexandre Ma <alex.ma@hatchtec.com> - HatchTec IT Dept.
+# Copyright 2024 Alexandre Ma <a1exma@hotmail.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
     'name': 'PDF Viewer Watermark',
     'version': '17.0.3.0',
-    'summary':'PDF Viewer Watermark Widgets',
-    'category': 'Alex Frontend',
+    'summary': 'PDF Viewer Watermark Widgets',
+    'category': 'Tools',
     'author': 'Alexandre Ma',
-    'website': 'https://github.com/Alexmalab',
-    'depends': ['base','base_setup','web','alex_frontend_base'],
+    'website': 'https://github.com/Alexmalab/OdooFrontendExtensions/tree/17.0/pdf_viewer_watermarked',
+    'depends': ['base','base_setup','web'],
     'assets': {
         'web.assets_backend': [
             'pdf_viewer_watermarked/static/src/lib/pdfjs.js',
@@ -21,4 +21,6 @@
     'installable': True,
     'application': False,
     'external_dependencies': {'python': ['reportlab']},
+    'price': 0.10,
+    'currency': 'USD'
 }
