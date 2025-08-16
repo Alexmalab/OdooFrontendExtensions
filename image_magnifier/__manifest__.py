@@ -8,7 +8,7 @@
     'summary': 'Add the `image_magnifier` field widget to enable an image magnifier on mouseover.',
     'category': 'Tools',
     'author': 'Alexandre Ma',
-    'website': 'https://github.com/Alexmalab',
+    'website': 'https://github.com/Alexmalab/OdooFrontendExtensions/tree/17.0/image_magnifier',
     'depends': ['base','base_setup','web'],
     'assets': {
         'web.assets_backend': [
